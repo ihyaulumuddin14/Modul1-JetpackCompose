@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -19,6 +20,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -36,18 +39,27 @@ class MainActivity : ComponentActivity() {
                     Column(
                         horizontalAlignment = Alignment.CenterHorizontally,
                         modifier = Modifier
+                            .background(Color.Gray)
+                            .padding(24.dp)
                             .fillMaxWidth()
-                            .padding(innerPadding)
-                            .padding(16.dp)
+                            .background(Color.LightGray)
+                            .padding(24.dp)
                     ) {
                         Image(
-                            painter = painterResource(id = R.drawable.logo_universitas_brawijaya),
+                            painter = painterResource(id = R.drawable.foto_profil),
                             contentDescription = "Foto Profil",
-                            modifier = Modifier.size(120.dp).clip(CircleShape)
+                            contentScale = ContentScale.Crop,
+                            modifier = Modifier
+                                .size(120.dp)
+                                .clip(CircleShape)
                         )
-                        Text("Nama: Andi", fontSize = 20.sp, fontWeight = FontWeight.Bold)
-                        Text("Mahasiswa Teknik Informatika")
+                        Spacer(modifier = Modifier.height(12.dp))
+                        Text("Nama Lengkap: Ihya' Ulumuddin", fontSize = 20.sp, fontWeight = FontWeight.Bold)
                         Spacer(modifier = Modifier.height(8.dp))
+                        Text("NIM: 245150201111024")
+                        Spacer(modifier = Modifier.height(8.dp))
+                        Text("Mahasiswa Teknik Informatika 2024")
+                        Spacer(modifier = Modifier.height(12.dp))
                     }
                 }
             }
