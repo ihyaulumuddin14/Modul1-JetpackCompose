@@ -16,6 +16,27 @@ Aplikasi Android sederhana untuk menampilkan halaman profil mahasiswa. Project i
 2. **activity_main.xml**
    Merupakan contoh layout tradisional berbasis XML menggunakan `LinearLayout` vertikal yang berisi `ImageView`, `TextView`, dan `Button`.
 
+## Screenshot landscape dan portrait
+<table>
+  <tr>
+    <td>
+      <img
+        src="https://github.com/user-attachments/assets/72168995-b3dc-4af5-bfa5-2322ce97b46d"
+        alt="Landscape"
+        width="700"
+      />
+    </td>
+    <td>
+      <img
+        src="https://github.com/user-attachments/assets/2f091077-5a3b-4879-a91a-23fb5febda3d"
+        alt="Portrait"
+        width="300"
+      />
+    </td>
+  </tr>
+</table>
+
+
 ## Keuntungan Compose Dibandingkan XML Layout
 
 Jetpack Compose menggunakan pendekatan deklaratif, dimana bisa hanya mendeskripsikan akan seperti apa UI yang diinginkan, misal Column langsung bisa diisikan dengan component Image, Text, Button, dan lain-lain dalam satu file kotlin yang sama. Berbeda dengan XML tradisional yang menggunakan LinearLayout atau jenis layout yang lain, dimana struktur tampilan XML, sedangkan logika interaksi tetap ditulis di file Kotlin.
